@@ -1,0 +1,81 @@
+<div>
+    <table>
+
+        <thead>
+            <tr colspan=2>
+                <th>Diffie-Hellman Key Exchange </th>
+            </tr>
+        </thead>
+        <tr align="left">
+            <td>
+                0) Given a large prime p=65537, a primary root g=3
+            </td>
+
+        </tr>
+        <tr align="left">
+            <td>
+                1) Choose a random number x
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                x = <input type="text" ng-model="dh.obj.x">
+            </td>
+        </tr>
+    
+        <tr align="left">
+            <td>
+                2) Compute X=g<sup>x</sup> mod p <button type="button" ng-click="dh.getDHC1()"
+                    class="btn btn-sm">COM</button>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                X = <input type="text" ng-model="dh.obj.X" ng-readonly="true">
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                3) Choose a random number y
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                y = <input type="text" ng-model="dh.obj.y">
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                4) Compute Y=g<sup>y</sup> mod p <button type="button" ng-click="dh.getDHC2()"
+                    class="btn btn-sm">COM</button>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                Y = <input type="text" ng-model="dh.obj.Y" ng-readonly="true">
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                Calculate the session key K=g<sup>xy</sup> mod p
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                    K=Y<sup>x</sup> mod p= <input type="text" ng-model="dh.obj.K1" ng-readonly = "true">
+                    <button type="button" ng-click="dh.getDHK1()"
+                    class="btn btn-sm">COM</button>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                    K=X<sup>y</sup> mod p= <input type="text" ng-model="dh.obj.K2" ng-readonly = "true">
+                    <button type="button" ng-click="dh.getDHK2()"
+                    class="btn btn-sm">COM</button>
+            </td>
+        </tr>
+
+
+
+    </table>
+</div>

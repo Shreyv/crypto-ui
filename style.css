@@ -1,0 +1,25 @@
+.centred {
+    position: absolute;
+    left: 40%;
+    top: auto;
+    /* transform: translate(-50%, -50%); */
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+table{
+    background-color: lightgrey;
+}
+
+button{
+    color: black;
+    background-color: darkgrey;
+}

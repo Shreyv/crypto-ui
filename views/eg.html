@@ -1,0 +1,76 @@
+
+<div>
+        <table>
+               
+            <thead>
+                <tr colspan = 2>
+                    <th>ElGamal Encryption/Decryption</th>
+                </tr>
+            </thead>
+            <tr align="left">
+                <td>
+                0) Given a large prime p=65537, a primary root g=3
+                </td>
+                
+            </tr>
+            <tr align="left">
+                <td>
+               1) Choose a private key x x = <input type="text" ng-model = "eg.obj.x"
+               only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                    <td>
+            2) Compute the corresponding public key y=g<sup>x</sup> mod p 
+            <button type="button" 
+            ng-click="eg.computePublicKey()" class="btn btn-sm">COM</button>
+                    </td>
+            </tr>
+            <tr align="left">
+               <td> y = <input type="text" ng-model = "eg.obj.y" ng-readonly="true"></td>
+            </tr>
+            <tr align="left">
+                   <td>
+            3) Input a message m  = <input type="text" ng-model = "eg.obj.m"
+                        only-digits>
+                   </td>
+            </tr>
+            <tr align="left">
+              <td>4) Encrypt </td> 
+            </tr>
+            <tr align="left">
+                    <td>
+               4.1 Choose a random number r r = <input type="text" ng-model = "eg.obj.r"
+               only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                4.2 Compute c1=g<sup>r</sup> mod p <button type="button" 
+                ng-click="eg.computeC1()" class="btn btn-sm">COM</button> 
+                c1 = <input type="text" ng-model = "eg.obj.c1" ng-readonly="true">     
+                </td>
+            </tr>
+            <tr align="left">
+                    <td>
+                    4.3 Compute c2= m* y<sup>r</sup> mod p <button type="button" 
+                    ng-click="eg.computeC2()" class="btn btn-sm">COM</button> 
+                    c2 = <input type="text" ng-model = "eg.obj.c2" ng-readonly="true">     
+                    </td>
+                </tr>
+            <tr align="left">
+                    <td>
+                            5) Decrypt C=(c1,c2)
+                    </td>
+            </tr>
+            <tr align="left">
+                    <td>
+                 m=c2/(c1)<sup>x</sup> mod p <button type="button" 
+                 ng-click="eg.decrypt()" class="btn btn-sm">COM</button> 
+                 m = <input type="text" ng-model = "eg.obj.dm" ng-readonly="true">
+                </td>
+            </tr> 
+            
+        </table>
+    </div>
+    

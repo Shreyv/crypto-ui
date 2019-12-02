@@ -1,0 +1,75 @@
+
+<div>
+    <table>
+           
+        <thead>
+            <tr colspan = 2>
+                <th>RSA Encryption/Decryption</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+             1 )  Generate primes p and q <button type="button" 
+              ng-click="rsa.getRandom()" class="btn btn-sm">GEN</button>
+             ( 1000 < p, q < 5000 )
+            </td>
+            
+        </tr>
+        <tr>
+            <td>
+                p = <input type="text" ng-model = "rsa.obj.p" ng-readonly="true" />
+            </td>
+        </tr>
+        <tr>
+                <td>
+                q = <input type="text" ng-model = "rsa.obj.q" ng-readonly="true"/>
+                </td>
+        </tr>
+        <tr align="left">
+                <td>
+            2 ) Compute n = pq        <button type="button" 
+                    ng-click="rsa.compute()" class="btn btn-sm">COM</button>
+                </td>
+        </tr>
+        <tr>
+                <td>
+            n = <input type="text" ng-model = "rsa.n" ng-readonly="true">
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+           3) Set a public key e  e = <input type="text" ng-model = "rsa.obj.e" only-digits/>
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+           4) Calculate the private key d   <button type="button" 
+           ng-click="rsa.getPrivateKey()" class="btn btn-sm">CAL</button>
+            </td>
+        </tr>
+        <tr>
+                <td>
+            d = <input type="text" ng-model = "rsa.obj.d" ng-readonly="true">
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+           5) Input a message m  m = <input type="text" ng-model = "rsa.obj.m" only-digits/>
+            </td>
+        </tr> 
+        <tr align="left">
+            <td>
+           6) Encrypt c=m<sup>e</sup> mod n   <button type="button" 
+           ng-click="rsa.getEncryption()" class="btn btn-sm">ENC</button> 
+           c = <input type="text" ng-model = "rsa.obj.c" only-digits/> 
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+               7) Decrypt m=c<sup>d</sup> mod n   <button type="button" 
+               ng-click="rsa.getDecryption()" class="btn btn-sm">DEC</button> 
+               m = <input type="text" ng-model = "rsa.obj.dm" /> 
+                </td>
+            </tr>
+    </table>
+</div>
