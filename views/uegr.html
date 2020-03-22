@@ -1,0 +1,159 @@
+<div class="row">
+    <div class="col-lg-4">
+        <table>
+
+            <thead>
+                <tr colspan=2>
+                    <th>Universal ElGamal Re-encryption</th>
+                </tr>
+            </thead>
+            <tr align="left">
+                <td>
+                    0) Given a large prime p=65537, a primary root g=3
+                </td>
+
+            </tr>
+            <tr align="left">
+                <td>
+                    1) Choose a private key x x = <input type="text" ng-model="uegr.obj.x" only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    2) Compute the corresponding public key y=g<sup class="sup-fontsize" >x</sup> mod p
+                    <button type="button" ng-disabled="uegr.obj.x == null" ng-click="uegr.computePublicKey()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td> y = <input type="text" ng-model="uegr.obj.y" ng-readonly="true"></td>
+            </tr>
+            <tr align="left">
+                <td>
+                    3) Choose a random number r1 <br>
+                    r1 = <input type="text" ng-model="uegr.obj.r1" only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    4) Compute the c1 c1= g<sup class="sup-fontsize" >r1</sup> mod p
+                    <button type="button" ng-disabled="uegr.obj.r1 == null" ng-click="uegr.getC1()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td> c1 = <input type="text" ng-model="uegr.obj.c1" ng-readonly="true"></td>
+            </tr>
+            <tr align="left">
+                <td>
+                    5) Input a message m = <input type="text" ng-model="uegr.obj.m" only-digits>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-lg-4">
+        <table>
+            <thead>
+                <tr colspan=2>
+                    <th>Universal ElGamal Re-encryption</th>
+                </tr>
+            </thead>
+
+            <tr align="left">
+                <td>
+                    6) Compute the c2 c2= m*y<sup class="sup-fontsize" >r1</sup> mod p
+                    <button type="button" ng-disabled="uegr.obj.m == null" ng-click="uegr.getC2()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td> c2 = <input type="text" ng-model="uegr.obj.c2" ng-readonly="true"></td>
+            </tr>
+            <tr align="left">
+                <td>
+                    7) Input random number r2 r2 = <input type="text" ng-model="uegr.obj.r2" only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    8) Compute the c3 and c4
+                    <button type="button" ng-disabled="uegr.obj.r2 == null" ng-click="uegr.getC3();uegr.getC4()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    c3 = g<sup class="sup-fontsize" >r2</sup> mod p <input type="text" ng-model="uegr.obj.c3" ng-readonly="true">
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    c4 = y<sup class="sup-fontsize" >r2</sup> mod p <input type="text" ng-model="uegr.obj.c4" ng-readonly="true">
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    9) Input random number s s = <input type="text" ng-model="uegr.obj.s" only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    10) Compute the c1<sup class="sup-fontsize" ><b>'</b></sup>
+                    <button type="button" ng-disabled="uegr.obj.s == null" ng-click="uegr.getC1_()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    c1<sup class="sup-fontsize" ><b>'</b></sup> = g<sup class="sup-fontsize" >r1+ r2 * s</sup> mod p <input type="text" ng-model="uegr.obj.c1_" ng-readonly="true">
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+    <div class="col-lg-4">
+        <table>
+            <thead >
+                <tr colspan=2>
+                    <th>Universal ElGamal Re-encryption</th>
+                </tr>
+            </thead>
+            <tr align="left">
+                <td>
+                    11) Compute the c2<sup class="sup-fontsize" ><b>'</b></sup>
+                    <button type="button" ng-disabled="uegr.obj.s == null" ng-click="uegr.getC2_()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    c2<sup class="sup-fontsize" ><b>'</b></sup> = m * y<sup class="sup-fontsize" >r1+ r2 * s</sup> mod p <input type="text" ng-model="uegr.obj.c2_" ng-readonly="true">
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    12) Input random number t t = <input type="text" ng-model="uegr.obj.t" only-digits>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    13) Compute the c3<sup class="sup-fontsize" ><b>'</b></sup> and c4<sup class="sup-fontsize" ><b>'</b></sup>
+                    <button type="button" ng-disabled="uegr.obj.t == null" ng-click="uegr.getC3_();uegr.getC4_()"
+                        class="btn btn-sm">COM</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    c3<sup class="sup-fontsize" ><b>'</b></sup> = g<sup class="sup-fontsize" >r2 * t</sup> mod p <input type="text" ng-model="uegr.obj.c3_" ng-readonly="true">
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                    c4<sup class="sup-fontsize" ><b>'</b></sup> = y<sup class="sup-fontsize" >r2 * t</sup> mod p <input type="text" ng-model="uegr.obj.c4_" ng-readonly="true">
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>

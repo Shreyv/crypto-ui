@@ -1,6 +1,6 @@
 .centred {
     position: absolute;
-    left: 40%;
+    left: 10%;
     top: auto;
     /* transform: translate(-50%, -50%); */
 }
@@ -23,3 +23,9 @@ button{
     color: black;
     background-color: darkgrey;
 }
+
+.sup-fontsize {
+    font-size: 90%;
+}
+
+th {text-align:center}

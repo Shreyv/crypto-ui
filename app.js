@@ -21,6 +21,14 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/dh',
             templateUrl: 'views/dh.html',
             controller: 'DHController as dh'
+        }).state('egr', {
+            url: '/egr',
+            templateUrl: 'views/egr.html',
+            controller: 'ElGamalReController as egr'
+        }).state('uegr', {
+            url: '/uegr',
+            templateUrl: 'views/uegr.html',
+            controller: 'UniversalElgamalController as uegr'
         });
 
 });

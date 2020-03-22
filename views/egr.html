@@ -1,0 +1,94 @@
+<div class="row">
+<div class="col-lg-5">
+    <table>
+           
+        <thead>
+            <tr colspan = 2>
+                <th>ElGamal ReEncryption</th>
+            </tr>
+        </thead>
+        <tr align="left">
+            <td>
+            0) Given a large prime p=65537, a primary root g=3
+            </td>
+            
+        </tr>
+        <tr align="left">
+            <td>
+           1) Choose a private key x x = <input type="text" ng-model = "egr.obj.eg1.x"
+           only-digits>
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+        2) Compute the corresponding public key y=g<sup class="sup-fontsize">x</sup> mod p 
+        <button type="button" 
+        ng-disabled= "egr.obj.eg1.x == null" ng-click="egr.computePublicKey()" class="btn btn-sm">COM</button>
+                </td>
+        </tr>
+        <tr align="left">
+           <td> y = <input type="text" ng-model = "egr.obj.eg1.y" ng-readonly="true"></td>
+        </tr>
+        <tr align="left">
+               <td>
+        3) Input a message m  = <input type="text" ng-model = "egr.obj.eg1.m"
+                    only-digits>
+               </td>
+        </tr>
+        <tr align="left">
+          <td>4) Encrypt </td> 
+        </tr>
+        <tr align="left">
+                <td>
+           4.1 Choose a random number r r = <input type="text" ng-model = "egr.obj.eg1.r"
+           only-digits>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+            4.2 Compute c1=g<sup class="sup-fontsize">r</sup> mod p <button type="button" ng-disabled="egr.obj.eg1.r == null"
+            ng-click="egr.getEGRC1()" class="btn btn-sm">COM</button> 
+            c1 = <input type="text" ng-model = "egr.obj.eg1.c1" ng-readonly="true">     
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+                4.3 Compute c2= m* y<sup class="sup-fontsize">r</sup> mod p <button type="button" ng-disabled="egr.obj.eg1.r == null"
+                ng-click="egr.getEGRC2()" class="btn btn-sm">COM</button> 
+                c2 = <input type="text" ng-model = "egr.obj.eg1.c2" ng-readonly="true">     
+                </td>
+            </tr>
+        
+    </table>
+</div>
+<div class="col-lg-5">
+    <table>
+           
+        <thead>
+            <tr colspan = 2>
+                <th>ElGamal ReEncryption</th>
+            </tr>
+        </thead>
+        <tr align="left">
+            <td>
+            5) Choose a random key s <br> 
+           s = <input type="text" ng-model = "egr.obj.s"
+           only-digits>
+            </td>
+        </tr>
+        <tr align="left">
+                <td>
+        6) Compute the corresponding ReEncryption  
+        <button type="button" 
+       ng-disabled="egr.obj.s == null" ng-click="egr.getREE()" class="btn btn-sm">COM</button>
+                </td>
+        </tr>
+        <tr align="left">
+           <td>c1<sup class="sup-fontsize"><b>'</b></sup> = <input type="text" ng-model = "egr.obj.c1_" ng-readonly="true"></td>
+        </tr> 
+        <tr align="left">
+            <td>c2<sup class="sup-fontsize"><b>'</b></sup> = <input type="text" ng-model = "egr.obj.c2_" ng-readonly="true"></td>
+         </tr> 
+    </table>
+</div>
+</div>
