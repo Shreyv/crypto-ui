@@ -89,6 +89,20 @@
         <tr align="left">
             <td>c2<sup class="sup-fontsize"><b>'</b></sup> = <input type="text" ng-model = "egr.obj.c2_" ng-readonly="true"></td>
          </tr> 
+         <tr align="left">
+            <td>
+                7) Decrypt 
+                <button type="button" ng-click="egr.getDecrypt()"
+                    class="btn btn-sm">DEC</button>
+            </td>
+        </tr>
+        <tr align="left">
+            <td>
+                m = c2 <sup class="sup-fontsize"><b>'</b></sup> * inv(C1 <sup class="sup-fontsize"><b>'x</b></sup>) mod p 
+                <br> Decrypred m = <input
+                    type="text" ng-model="egr.obj.dm" ng-readonly="true">
+            </td>
+        </tr> 
     </table>
 </div>
 </div>

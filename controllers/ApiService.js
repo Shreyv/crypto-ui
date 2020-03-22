@@ -301,6 +301,29 @@
                         return $q.reject(errResponse);
                     }
                 )
+            },getUniversalDecrypt : function(data){
+                return $http.post('http://127.0.0.1:5000/uegr/dec/',data).
+                then(
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        console.error('Error');
+                        return $q.reject(errResponse);
+                    }
+                )
+            },
+            getREEDecrypt : function(data){
+                return $http.post('http://127.0.0.1:5000/egr/dec/',data).
+                then(
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        console.error('Error');
+                        return $q.reject(errResponse);
+                    }
+                )
             }
 
         }

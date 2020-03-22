@@ -75,6 +75,12 @@
             })
         }
 
+        ctrl.getDecrypt = function(){
+            ApiService.getUniversalDecrypt(ctrl.obj).then(function(data){
+                ctrl.obj.dm  = data.dm; 
+            })
+        }
+
      
 
 

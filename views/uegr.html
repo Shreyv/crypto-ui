@@ -20,7 +20,7 @@
             </tr>
             <tr align="left">
                 <td>
-                    2) Compute the corresponding public key y=g<sup class="sup-fontsize" >x</sup> mod p
+                    2) Compute the corresponding public key y=g<sup class="sup-fontsize">x</sup> mod p
                     <button type="button" ng-disabled="uegr.obj.x == null" ng-click="uegr.computePublicKey()"
                         class="btn btn-sm">COM</button>
                 </td>
@@ -36,7 +36,7 @@
             </tr>
             <tr align="left">
                 <td>
-                    4) Compute the c1 c1= g<sup class="sup-fontsize" >r1</sup> mod p
+                    4) Compute the c1 c1= g<sup class="sup-fontsize">r1</sup> mod p
                     <button type="button" ng-disabled="uegr.obj.r1 == null" ng-click="uegr.getC1()"
                         class="btn btn-sm">COM</button>
                 </td>
@@ -61,7 +61,7 @@
 
             <tr align="left">
                 <td>
-                    6) Compute the c2 c2= m*y<sup class="sup-fontsize" >r1</sup> mod p
+                    6) Compute the c2 c2= m*y<sup class="sup-fontsize">r1</sup> mod p
                     <button type="button" ng-disabled="uegr.obj.m == null" ng-click="uegr.getC2()"
                         class="btn btn-sm">COM</button>
                 </td>
@@ -83,12 +83,14 @@
             </tr>
             <tr align="left">
                 <td>
-                    c3 = g<sup class="sup-fontsize" >r2</sup> mod p <input type="text" ng-model="uegr.obj.c3" ng-readonly="true">
+                    c3 = g<sup class="sup-fontsize">r2</sup> mod p <input type="text" ng-model="uegr.obj.c3"
+                        ng-readonly="true">
                 </td>
             </tr>
             <tr align="left">
                 <td>
-                    c4 = y<sup class="sup-fontsize" >r2</sup> mod p <input type="text" ng-model="uegr.obj.c4" ng-readonly="true">
+                    c4 = y<sup class="sup-fontsize">r2</sup> mod p <input type="text" ng-model="uegr.obj.c4"
+                        ng-readonly="true">
                 </td>
             </tr>
             <tr align="left">
@@ -98,14 +100,15 @@
             </tr>
             <tr align="left">
                 <td>
-                    10) Compute the c1<sup class="sup-fontsize" ><b>'</b></sup>
+                    10) Compute the c1<sup class="sup-fontsize"><b>'</b></sup>
                     <button type="button" ng-disabled="uegr.obj.s == null" ng-click="uegr.getC1_()"
                         class="btn btn-sm">COM</button>
                 </td>
             </tr>
             <tr align="left">
                 <td>
-                    c1<sup class="sup-fontsize" ><b>'</b></sup> = g<sup class="sup-fontsize" >r1+ r2 * s</sup> mod p <input type="text" ng-model="uegr.obj.c1_" ng-readonly="true">
+                    c1<sup class="sup-fontsize"><b>'</b></sup> = g<sup class="sup-fontsize">r1+ r2 * s</sup> mod p
+                    <input type="text" ng-model="uegr.obj.c1_" ng-readonly="true">
                 </td>
             </tr>
 
@@ -114,21 +117,22 @@
     </div>
     <div class="col-lg-4">
         <table>
-            <thead >
+            <thead>
                 <tr colspan=2>
                     <th>Universal ElGamal Re-encryption</th>
                 </tr>
             </thead>
             <tr align="left">
                 <td>
-                    11) Compute the c2<sup class="sup-fontsize" ><b>'</b></sup>
+                    11) Compute the c2<sup class="sup-fontsize"><b>'</b></sup>
                     <button type="button" ng-disabled="uegr.obj.s == null" ng-click="uegr.getC2_()"
                         class="btn btn-sm">COM</button>
                 </td>
             </tr>
             <tr align="left">
                 <td>
-                    c2<sup class="sup-fontsize" ><b>'</b></sup> = m * y<sup class="sup-fontsize" >r1+ r2 * s</sup> mod p <input type="text" ng-model="uegr.obj.c2_" ng-readonly="true">
+                    c2<sup class="sup-fontsize"><b>'</b></sup> = m * y<sup class="sup-fontsize">r1+ r2 * s</sup> mod p
+                    <input type="text" ng-model="uegr.obj.c2_" ng-readonly="true">
                 </td>
             </tr>
             <tr align="left">
@@ -138,22 +142,37 @@
             </tr>
             <tr align="left">
                 <td>
-                    13) Compute the c3<sup class="sup-fontsize" ><b>'</b></sup> and c4<sup class="sup-fontsize" ><b>'</b></sup>
+                    13) Compute the c3<sup class="sup-fontsize"><b>'</b></sup> and c4<sup
+                        class="sup-fontsize"><b>'</b></sup>
                     <button type="button" ng-disabled="uegr.obj.t == null" ng-click="uegr.getC3_();uegr.getC4_()"
                         class="btn btn-sm">COM</button>
                 </td>
             </tr>
             <tr align="left">
                 <td>
-                    c3<sup class="sup-fontsize" ><b>'</b></sup> = g<sup class="sup-fontsize" >r2 * t</sup> mod p <input type="text" ng-model="uegr.obj.c3_" ng-readonly="true">
+                    c3<sup class="sup-fontsize"><b>'</b></sup> = g<sup class="sup-fontsize">r2 * t</sup> mod p <input
+                        type="text" ng-model="uegr.obj.c3_" ng-readonly="true">
                 </td>
             </tr>
             <tr align="left">
                 <td>
-                    c4<sup class="sup-fontsize" ><b>'</b></sup> = y<sup class="sup-fontsize" >r2 * t</sup> mod p <input type="text" ng-model="uegr.obj.c4_" ng-readonly="true">
+                    c4<sup class="sup-fontsize"><b>'</b></sup> = y<sup class="sup-fontsize">r2 * t</sup> mod p <input
+                        type="text" ng-model="uegr.obj.c4_" ng-readonly="true">
                 </td>
             </tr>
-
+            <tr align="left">
+                <td>
+                    14) Decrypt 
+                    <button type="button" ng-disabled="uegr.obj.c4_ == null" ng-click="uegr.getDecrypt()"
+                        class="btn btn-sm">DEC</button>
+                </td>
+            </tr>
+            <tr align="left">
+                <td>
+                  Decrypted  m = c2/c1<sup class="sup-fontsize"><b>x</b></sup> mod p  <input
+                        type="text" ng-model="uegr.obj.dm" ng-readonly="true">
+                </td>
+            </tr>
         </table>
     </div>
 </div>

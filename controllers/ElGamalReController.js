@@ -41,6 +41,13 @@
             })
         }
 
+        ctrl.getDecrypt = function(){
+            ApiService.getREEDecrypt(ctrl.obj).then(function(data){
+                ctrl.obj.dm  = data.dm; 
+            })
+        }
+
+
 
         
     }
